@@ -1,0 +1,12 @@
+/* DEFAULT THEME */
+.theme-light,
+body {
+  background: var(--color-background-default);
+  color: var(--color-text-primary);
+}
+
+/* ADD MORE THEMES HERE */
+.theme-dark {
+  --color-background-default: var(--gray-900);
+  --color-text-primary: var(--white);
+}

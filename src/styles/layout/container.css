@@ -1,0 +1,5 @@
+.container {
+  width: calc(var(--layout-width, 100%) - 2 * var(--layout-outer-gutter, 0));
+  margin-right: auto;
+  margin-left: auto;
+}

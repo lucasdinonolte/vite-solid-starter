@@ -1,0 +1,7 @@
+/* Mobile first media queries */
+@custom-media --xs (min-width: 400px);
+@custom-media --sm (min-width: 700px);
+@custom-media --md (min-width: 960px);
+@custom-media --lg (min-width: 1200px);
+@custom-media --xl (min-width: 1550px);
+@custom-media --max (min-width: 1920px);

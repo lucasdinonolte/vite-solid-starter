@@ -1,0 +1,38 @@
+:root {
+  /* GENERAL COLORS */
+  --white: #fff;
+  --gray-900: #111;
+  --gray-500: #333;
+  --gray-300: #ccc;
+
+  /* NAMED COLORS 
+    Only use these in your CSS, so theming is easier */
+  --color-background-default: var(--white);
+  --color-text-primary: var(--gray-500);
+  --color-text-secondary: var(--gray-300);
+  --color-accent: #0000ff;
+
+  /* FONTS */
+  --font-family-sans: "Helvetica", sans-serif;
+  --font-family-serif: "Georgia", serif;
+  --font-family-mono: "Menlo", monospace;
+
+  /* FONT SIZES */
+  --text-xs: 0.75rem;
+  --text-s: 0.875rem;
+  --text-m: 1rem;
+  --text-l: 1.125rem;
+  --text-xl: 1.25rem;
+
+  /* SPACING */
+  --space-xs: 0.5rem;
+  --space-s: 0.75rem;
+  --space-m: 1rem;
+  --space-l: 1.5rem;
+  --space-xl: 2rem;
+
+  /* LAYOUT */
+  --layout-width: 100%;
+  --layout-outer-gutter: 24px;
+  --layout-grid-gutter: 24px;
+}

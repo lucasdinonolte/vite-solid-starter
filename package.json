@@ -1,0 +1,63 @@
+{
+  "name": "my-project",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "vite build --outDir dist && npm run build:server && node scripts/prerender",
+    "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
+    "dev": "node scripts/server",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:js": "eslint .",
+    "lint": "npm run lint:js && npm run lint:css",
+    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,json,md,mdx}\"",
+    "scaffold": "lazy ./.snippets",
+    "start": "serve dist",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@solidjs/meta": "^0.29.3",
+    "@solidjs/router": "^0.12.3",
+    "express": "^4.18.2",
+    "solid-js": "^1.8.15"
+  },
+  "devDependencies": {
+    "@csstools/postcss-global-data": "^2.0.1",
+    "@lucasdinonolte/lazy-cli": "0.2.0",
+    "@testing-library/jest-dom": "^6.1.2",
+    "@unocss/preset-mini": "^0.58.5",
+    "clsx": "^2.0.0",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-vitest-globals": "^1.4.0",
+    "fs-extra": "^11.1.1",
+    "get-port": "^7.0.0",
+    "glob": "^10.3.3",
+    "jsdom": "^22.1.0",
+    "open": "^9.1.0",
+    "postcss-preset-env": "^9.1.1",
+    "prettier": "^3.0.2",
+    "serve": "^14.2.1",
+    "stylelint": "^15.10.3",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-property-sort-order-smacss": "^9.1.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-no-unsupported-browser-features": "^7.0.0",
+    "unocss": "^0.57.2",
+    "vite": "^4.4.9",
+    "vite-imagetools": "^5.0.8",
+    "vite-plugin-image-presets": "^0.3.4",
+    "vite-plugin-pages": "^0.31.0",
+    "vite-plugin-solid": "^2.10.1",
+    "vitest": "^0.34.3"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "last 2 iOS major versions",
+    "last 2 Safari major versions",
+    "not OperaMini all",
+    "not dead"
+  ]
+}

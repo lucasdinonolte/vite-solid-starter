@@ -1,0 +1,31 @@
+/* This file defines text styles. The purpose of a text
+ * style is to provide a consistent look and feel for
+ * text elements across the website. It is therefore
+ * a slightly higher level abstraction than simply
+ * providing utility styles for font-size or font family.
+ *
+ * Ideally a text style contains the following properties:
+ * - font-family
+ * - font-size
+ * - line-height
+ * - letter-spacing
+ *
+ * Color should probably be defined in the component using
+ * this text style. But if a text style is tightly tied to
+ * a color feel free to define color in the text style too.
+ */
+.text-body-xs {
+  font-family: var(--font-family-sans);
+  font-size: var(--text-xs);
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}
+
+.text-body-s {
+  font-family: var(--font-family-sans);
+  font-size: var(--text-s);
+  letter-spacing: 0.0075em;
+  line-height: 1.5;
+}
+
+/* ETC... */
