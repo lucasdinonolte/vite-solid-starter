@@ -1,6 +1,8 @@
 import { A } from '@solidjs/router';
 import { Title } from '@solidjs/meta';
 
+import { allPosts } from '@content';
+
 const Page = () => {
   return (
     <div>
@@ -11,6 +13,7 @@ const Page = () => {
           Edit <code>src/pages/index.jsx</code> to get started
         </p>
         <A href="/about">About</A>
+        <pre>{JSON.stringify(allPosts, null, 2)}</pre>
         <div>
           <div class="row">
             <p class="md:col-3/4">I go to half width on larger screens.</p>

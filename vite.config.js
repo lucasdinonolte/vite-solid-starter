@@ -4,6 +4,7 @@ import solid from 'vite-plugin-solid';
 import Pages from 'vite-plugin-pages';
 import UnoCSS from 'unocss/vite';
 import imagePresets, { widthPreset } from 'vite-plugin-image-presets';
+import contentPlugin, { defineJSONSource } from './lib/content/index.js';
 
 export default defineConfig({
   resolve: {
@@ -22,6 +23,22 @@ export default defineConfig({
   plugins: [
     UnoCSS(),
     solid({ ssr: true }),
+    contentPlugin({
+      sources: [
+        defineJSONSource({
+          name: 'Posts',
+          filePathPattern: './content/posts/**/*.json',
+          schema: ({ z }) =>
+            z.object({
+              title: z
+                .string()
+                .min(1)
+                .transform((str) => str.toUpperCase()),
+              date: z.coerce.date(),
+            }),
+        }),
+      ],
+    }),
     Pages({
       dirs: './src/pages/',
       exclude: ['**/_*.jsx'],
